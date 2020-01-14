@@ -40,17 +40,15 @@ def total_even_pairs(src)
   # this!
   total = 0
   row_index = 0
-    while row_index < src.count do
-      element_index = 0
-      while element_index < src[row_index].count do
-        if src[row_index][element_index].even? && src[row_index][element_index].even?
-          total += src[row_index][element_index]
-          element_index += 1
-        else
-      element_index += 1
-        end
-      end
-  row_index += 1
-    end
+  while row_index < src.count do
+    num1 = src[row_index][0] 
+    num2 = src[row_index][1] 
+    if num1.even? && num2.even?
+     total += (num1 + num2)
+     row_index += 1
+    else
+    row_index += 1
+    end  
+  end
 total
 end
